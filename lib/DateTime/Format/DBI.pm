@@ -1,28 +1,31 @@
 package DateTime::Format::DBI;
-# $Id$
+# $Id: DBI.pm,v 1.2 2003/07/20 14:17:27 cfaerber Exp $
 
 use strict;
 use vars qw ($VERSION);
 
 use Carp;
-# use DateTime 0.10;
+use DBI 1.21;
 
 $VERSION = '0.03';
 $VERSION = $VERSION + 0.0;
 
 our %db_to_parser = (
+  # lowercase for case-insensitivity!
   'mysql'	=> 'DateTime::Format::MySQL',
-  'Pg'		=> 'DateTime::Format::Pg',
+  'pg'		=> 'DateTime::Format::Pg',
 );
 
 sub new {
   my ($name,$dbh) = @_;
-
   UNIVERSAL::isa($dbh,'DBI::db') || croak('Not a DBI handle.');
-  my $dbtype = $dbh->{Driver}->{Name};
 
-  my $pclass = $db_to_parser{$dbtype};
-  $pclass || croak("Unsupported database driver 'DBD::".$dbtype."'");
+# my $dbtype = $dbh->{Driver}->{Name};
+  my @dbtypes = DBI::_dbtype_names($dbh);
+  my $dbtype = shift @dbtypes;
+
+  my $pclass = $db_to_parser{lc $dbtype};
+  $pclass || croak("Unsupported database driver '".$dbtype."'");
 
   my $parser = eval "use $pclass; $pclass->new();";
 
