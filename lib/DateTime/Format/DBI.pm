@@ -1,5 +1,5 @@
 package DateTime::Format::DBI;
-# $Id: Pg.pm,v 1.6 2003/05/30 14:14:23 cfaerber Exp $
+# $Id$
 
 use strict;
 use vars qw ($VERSION);
@@ -7,7 +7,7 @@ use vars qw ($VERSION);
 use Carp;
 use DateTime 0.10;
 
-our $VERSION = '0.01';
+$VERSION = '0.02';
 
 $VERSION = eval $VERSION;
 
