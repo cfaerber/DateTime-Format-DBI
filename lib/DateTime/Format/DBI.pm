@@ -61,8 +61,9 @@ a given DBI connection (and C<DBD::*> driver).
 
 
 It currently supports the following drivers: 
+L<IBM DB2 (DB2)|DateTime::Format::DB2>,
 L<MySQL|DateTime::Format::MySQL>, 
-L<Oracle|DateTime::Format::Oracle>,
+# L<Oracle|DateTime::Format::Oracle>,
 L<PostgreSQL (Pg)|DateTime::Format::Pg>.
 
 B<WARNING:> This module provides a quick method to find the
