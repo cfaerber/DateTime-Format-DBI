@@ -1,5 +1,9 @@
 Revision history for Perl extension DateTime::Format::DBI.
 
+0.032 Sat Sep 13 00:00:00 2008
+	- added support for DateTime::Format::DB2
+	  (patch by Chris Weyl)
+
 0.031 Mon Nov 03 00:00:00 2003
 	- include missing dependency on DBI (>= 1.2) in 
 	  Makefile.PL (reported by Joshua Hoblitt).
