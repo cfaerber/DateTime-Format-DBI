@@ -12,5 +12,7 @@ WriteMakefile(
 	},
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'lib/DateTime/Format/DBI.pm', # retrieve abstract from module
-       AUTHOR     => 'Claus Färber <perl@faerber.muc.de>') : ()),
+       AUTHOR     => 'Claus Faerber <CFAERBER@cpan.org>',
+       LICENSE	  => 'perl'
+    ) : ()),
 );

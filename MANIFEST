@@ -4,4 +4,7 @@ MANIFEST
 LICENSE
 Makefile.PL
 lib/DateTime/Format/DBI.pm
-t/1basic.t
+t/00basic.t
+t/10pod.t
+t/11pod_cover.t
+t/withsqlite.t
