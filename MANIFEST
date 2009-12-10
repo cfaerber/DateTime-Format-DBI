@@ -1,8 +1,10 @@
 README
 Changes
-MANIFEST
 LICENSE
+MANIFEST
+META.yml
 Makefile.PL
+SIGNATURE
 lib/DateTime/Format/DBI.pm
 t/00basic.t
 t/10pod.t

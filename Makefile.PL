@@ -15,4 +15,25 @@ WriteMakefile(
        AUTHOR     => 'Claus Faerber <CFAERBER@cpan.org>',
        LICENSE	  => 'perl'
     ) : ()),
+
+    $ExtUtils::MakeMaker::VERSION < 6.18 ? () : (
+	'SIGN'		=> 1,
+    ),
+
+    $ExtUtils::MakeMaker::VERSION < 6.45 ? () : (
+	'META_MERGE'	=> { 
+	    'requires'	    => { 'perl'	=> 5.003, },
+#	    'recommends'    => { 'perl'	=> 5.008003, },
+        },
+    ),
 );
+
+sub MY::postamble {
+return <<EOF
+release: release-cpan
+
+release-cpan:
+	cpan-upload \$(DISTVNAME).tar\$(SUFFIX)
+
+EOF
+}
