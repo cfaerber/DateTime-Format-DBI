@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.035';
+$VERSION = '0.036';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
@@ -27,7 +27,7 @@ sub new {
   UNIVERSAL::isa($dbh,'DBI::db') || croak('Not a DBI handle.');
 
 # my $dbtype = $dbh->{Driver}->{Name};
-  my @dbtypes = eval { DBI::_dbtype_names($dbh) };
+  my @dbtypes = eval { DBI::_dbtype_names($dbh,0) };
   my $dbtype = shift @dbtypes;
 
   my $pclass = $db_to_parser{lc $dbtype};
