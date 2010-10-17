@@ -8,7 +8,7 @@ use warnings;
 use Carp;
 use DBI 1.21;
 
-$VERSION = '0.039_20101017';
+$VERSION = '0.039_20101018';
 $VERSION = eval { $VERSION };
 
 our %db_to_parser = (
