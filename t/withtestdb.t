@@ -42,4 +42,8 @@ foreach my $dbkey ( @dbkeys )
   }
 }
 
-diag "tested with: @done, skipped: @skip";
+my @mess;
+push @mess, "tested: @done" if @done;
+push @mess, "skipped: @skip" if @skip;
+
+diag join ", ", @mess;
