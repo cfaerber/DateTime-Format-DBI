@@ -46,5 +46,3 @@ Revision history for Perl extension DateTime::Format::DBI.
 	- original version
 	- supports DBD::mysql and DateTime::Format::MySQL
 	- supports DBD::Pg and DateTime::Format::Pg
-
-$Id$

@@ -1,5 +1,4 @@
 package DateTime::Format::DBI;
-# $Id$
 
 use strict;
 use vars qw ($VERSION);
