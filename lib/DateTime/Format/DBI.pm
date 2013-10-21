@@ -182,7 +182,7 @@ Claus FE<auml>rber <CFAERBER@cpan.org>
 
 =head1 LICENSE
 
-Copyright 2003-2010 Claus FE<auml>rber.  All rights reserved.  
+Copyright 2003-2013 Claus FE<auml>rber.  All rights reserved.  
 
 This program is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
