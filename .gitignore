@@ -9,3 +9,5 @@ MYMETA.yml
 Makefile.PL
 _build/
 blib/
+DateTime-Format-*/
+DateTime-Format-*-.tar.gz
